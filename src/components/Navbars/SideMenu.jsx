@@ -63,7 +63,7 @@ const getFilteredItems = (query, items, useInput) => {
   }
   console.log("items: ",items.filter((menu) => menu.name.includes(query)))
 
-  return items.filter((menu) => menu.name.includes(query));
+  return items.filter((menu) => menu.name.toLowerCase().includes(query.toLowerCase()));
 }
 
 const SideMenu = (props) => {
