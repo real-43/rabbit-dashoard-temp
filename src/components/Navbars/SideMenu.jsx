@@ -53,8 +53,11 @@ export const menuItems = [
   
 ];
 
-const getFilteredItems = (query, items) => {
+const getFilteredItems = (query, items, useInput) => {
   if (!query) {
+    if (useInput) {
+      window.location.reload(false);
+    }
     console.log("item: ",items)
     return items;
   }
@@ -66,9 +69,9 @@ const getFilteredItems = (query, items) => {
 const SideMenu = (props) => {
   const [inactive, setInactive] = useState(false);
   const [query, setQuery] = useState("");
-  const [use, setUse] = useState(false);
+  const [useInput, setUseInput] = useState(false);
 
-  const filteredItems = getFilteredItems(query, menuItems);
+  const filteredItems = getFilteredItems(query, menuItems, useInput);
 
   useEffect(() => {
     if (inactive) {
@@ -125,7 +128,7 @@ const SideMenu = (props) => {
             <i class="bi bi-search"  style={{color: 'white'}}></i>
           </button>
 
-          <input type="text" onChange={(e) => setQuery(e.target.value)} placeholder="  search..." />
+          <input type="text" onChange={(e) => {setUseInput(true); setQuery(e.target.value);}} placeholder="  search..." />
         </div>
 
         <div className="divider"></div>
