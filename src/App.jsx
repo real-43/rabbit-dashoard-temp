@@ -1,8 +1,10 @@
 import "./App.css";
-import SideMenu, { menuItems } from "./components/SideMenu";
+import SideMenu, { menuItems } from "./components/Navbars/SideMenu";
+import Topbar from './components/Navbars/Topbar';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
+import Footer from "./components/Navbars/Footer";
 
 function App() {
   const [inactive, setInactive] = useState(false);
@@ -16,7 +18,8 @@ function App() {
             setInactive(inactive);
           }}
         />
-
+      <Topbar />
+      <Footer />
         <div className={`container ${inactive ? "inactive" : ""}`}>
           {menuItems.map((menu, index) => (
             <>

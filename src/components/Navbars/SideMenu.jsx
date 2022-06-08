@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo/rabbitcard-logo.png";
-import inactive_logo from "../assets/logo/rabbitcard-logo.jpg";
-
 import MenuItem from "./MenuItem";
 
 /**
@@ -95,9 +92,9 @@ const SideMenu = (props) => {
       <div className="top-section">
         <div className="logo" onClick={() => setInactive(!inactive)}>
           {inactive ? (
-            <img src={inactive_logo} alt="rabbit-logo" className="logo1"/>
+            <img src="rabbitcard-logo.jpg" alt="rabbit-logo" className="logo1"/>
           ) : (
-            <img src={logo} alt="rabbit-logo" className="logo2" />
+            <img src="rabbitcard-logo.png" alt="rabbit-logo" className="logo2" />
           )}
           
         </div>
