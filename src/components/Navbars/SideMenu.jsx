@@ -53,9 +53,22 @@ export const menuItems = [
   
 ];
 
+const getFilteredItems = (query, items) => {
+  if (!query) {
+    console.log("item: ",items)
+    return items;
+  }
+  console.log("items: ",items.filter((menu) => menu.name.includes(query)))
+
+  return items.filter((menu) => menu.name.includes(query));
+}
 
 const SideMenu = (props) => {
   const [inactive, setInactive] = useState(false);
+  const [query, setQuery] = useState("");
+  const [use, setUse] = useState(false);
+
+  const filteredItems = getFilteredItems(query, menuItems);
 
   useEffect(() => {
     if (inactive) {
@@ -112,14 +125,14 @@ const SideMenu = (props) => {
             <i class="bi bi-search"  style={{color: 'white'}}></i>
           </button>
 
-          <input type="text" placeholder="  search..." />
+          <input type="text" onChange={(e) => setQuery(e.target.value)} placeholder="  search..." />
         </div>
 
         <div className="divider"></div>
 
         <div className="main-menu">
           <ul>
-            {menuItems.map((menuItem, index) => (
+            {filteredItems.map((menuItem, index) => (
               <MenuItem
                 key={index}
                 name={menuItem.name}
