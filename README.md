@@ -68,3 +68,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Thank you for original https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbXRqa3lVZEZXLTBqS0tNaDkyUWJ2NEVwVndLd3xBQ3Jtc0tsZFpCWmxHeDQyNDRkVExod2hDR2JKdkZLd1BFME1FNEFJWEZ4cVdrUm4yRi1fSUhRdVdBMjJURE5rM0d1QnNZUXJOU2hhVkhTY1k3NEVtSE1NaWhPQnBmOW9fazNaVF9pTDUwZ21PdXN0SUZSMmYtWQ&q=https%3A%2F%2Fwebscript.info%2Frizwan%2Freactjs-sidebar-navigation-tutorial-using-react-router-and-hooks-60db5c62cfebb&v=99hJdy-mj5I
